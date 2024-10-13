@@ -26,7 +26,7 @@ void compute_coins(int amount)
 	}else if (pennies > 1){
 		cout << pennies << " pennies." << endl;
 	} else {
-		cout << "0 pennies." << endl;
+		cout << endl;
 	}
 }
 int main()
