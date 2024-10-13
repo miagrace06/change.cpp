@@ -59,10 +59,8 @@ int main()
 
 	if (amount > 0 && amount < 100){
 		compute_coins(amount);
-	} else if (amount > 99) {
+	} else if (amount > 99|| amount < 0) {
 		cout << "Amount is out of bounds. Must be between 1 and 99." << endl;
-	} else if (amount < 0){
-		cout << "Invalid input. Please enter a non-negative number." << endl;
 	}
 	} while (amount != 0);
 
