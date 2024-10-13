@@ -1,6 +1,7 @@
-// change.cpp
-// Mia Campanella 
-// Perm: A2A3M49
+//change.cpp
+//Mia Campanella 
+//Perm: A2A3M49
+//Created on: 10-09-2024
 #include <iostream>
 using namespace std;
 void compute_coins(int amount)
