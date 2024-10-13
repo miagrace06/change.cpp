@@ -8,31 +8,19 @@ void compute_coins(int amount)
 	//Postcondition: the function prints out the number of quarters, dimes, and pennies needed to make the amount value 
 {
 	cout << amount << " cents can be given in ";
-	int quarters, dimes, pennies;
-	quarters = amount / 25;
+	int quarters = amount / 25;
 	amount %= 25; 
 
-	dimes = amount / 10;
+	int dimes = amount / 10;
 	amount %= 10;
 
-	pennies = amount;
+	int pennies = amount;
 	
-	if (quarters == 1){
-		cout << quarters << " quarter, ";
-	}else {
-		cout << quarters << " quarters, ";
-	}
-       	if (dimes == 1) {
-	       	cout << dimes << " dime, ";
-      } else {
-	      cout << dimes << " dimes, ";
-      }
+	cout << quarters << " quarter" << (quarters == 1 ? "" : "s") << ", ";
 
-      if (pennies == 1) {
-	      cout << pennies << " penny." << endl;
-      } else {
-	      cout << pennies << " pennies." << endl;
-      }
+	cout << dimes << " dime" << (dimes == 1 ? "" : "s") << ", ";
+
+	cout << pennies << " penny << (pennies == 1 ? "." : "ies.") <<endl;
 }
 int main()
 {
