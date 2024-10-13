@@ -21,17 +21,34 @@ void compute_coins(int amount)
 
 	int pennies = amount;
 	
-	cout << quarters << " quarter" << (quarters == 1 ? "" : "s") << ", ";
+	if (quarters == 1){
+		cout << quarters << " quarter";
+	} else if (quarters > 1) {
+		cout << quarters << " quarters";
+			}
 
-	cout << dimes << " dime" << (dimes == 1 ? "" : "s") << ", ";
-
+	if (quarters > 0 && (dimes > 0 || pennies > 0)){
+		cout << ", ";
+	}
+	if (dimes == 1){
+		cout << dimes << " dime";
+	} else if (dimes > 1) {
+		cout << dimes << " dimes";
+	}
+	if (dimes > 0 && pennies > 0){
+		cout << ", ";
+	}
+	
 	if (pennies == 1) {
 		cout << pennies << " penny." <<endl;
 	}else if (pennies > 1){
 		cout << pennies << " pennies." << endl;
 	} else {
-		cout << endl;
+		cout << "." << endl;
 	}
+	
+	
+		
 }
 int main()
 {
