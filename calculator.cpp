@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
         //Part 1: Check to see if the number of arguments is correct
         if (argc != 4){
-                cout << "Number of arguments is incorrect." << endl;
+                cerr << "Number of arguments is incorrect." << endl;
                 exit(1);
         }
 
@@ -22,14 +22,15 @@ int main(int argc, char *argv[])
         int num1 = atoi(argv[1]);
         char operation = argv[2][0];
         int num2 = atoi(argv[3]);
+	
         //Part 3: Check for illegal operation like divide by zero
         if (operation != '+' && operation != '-' && operation != 'x' && operation != '%') {
-                cout << "Bad operation choice." <<endl;
+                cerr << "Bad operation choice." <<endl;
                 exit(1);
         }
 
         if (operation == '%' && num2 == 0){
-                cout << "Cannot divide by zero." << endl;
+                cerr << "Cannot divide by zero." << endl;
                 exit(1);
         }
 
@@ -38,15 +39,16 @@ int main(int argc, char *argv[])
         switch (operation) {
                 case '+':
                         result = num1 + num2;
-					   break;
+			break;
                 case '-':
                         result = num1 - num2;
                         break;
                 case 'x':
                         result = num1 * num2;
+			break;
                 case '%':
                         result = num1 % num2;
-                        break;
+			break;
         }
 
         cout << result <<endl;
