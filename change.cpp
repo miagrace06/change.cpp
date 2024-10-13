@@ -21,7 +21,13 @@ void compute_coins(int amount)
 
 	cout << dimes << " dime" << (dimes == 1 ? "" : "s") << ", ";
 
-	cout << pennies << " penny" << (pennies == 1 ? "." : "ies.") << endl;
+	if (pennies == 1) {
+		cout << pennies << " penny." <<endl;
+	}else if (pennies > 1){
+		cout << pennies << " pennies." << endl;
+	} else {
+		cout << "0 pennies." << endl;
+	}
 }
 int main()
 {
