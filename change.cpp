@@ -37,7 +37,7 @@ int main()
 {
 	int amount;
 	do {
-		cout << "Enter number of cents (or zero to quit): "<<endl;
+		cout << "Enter number of cents (or zero to quit):"<<endl;
 		cin >> amount;
 
 	if (amount > 0 && amount < 100){
