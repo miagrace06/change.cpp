@@ -1,4 +1,4 @@
-// Change.cpp
+// change.cpp
 // Mia Campanella 
 // Perm: A2A3M49
 #include <iostream>
